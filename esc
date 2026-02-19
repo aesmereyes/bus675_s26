@@ -1,0 +1,59 @@
+[33mcommit 402f11a6e8de8ea4e2dbad87bc52bf750acdebeb[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: aesmereyes <abireyes@chapman.edu>
+Date:   Thu Feb 5 18:08:36 2026 -0800
+
+    add test text file
+
+[33mcommit a4c17f80727e98e9c3d44f194e3490f502a67082[m
+Author: Dylan Walker <dylan.travis.walker@gmail.com>
+Date:   Thu Feb 5 12:45:29 2026 -0800
+
+    Fix link to wrong repo in readme
+
+[33mcommit e83963825f6d7fff4637fc91c6a02060b220c5b1[m
+Author: Dylan Walker <dylan.travis.walker@gmail.com>
+Date:   Thu Feb 5 10:21:18 2026 -0800
+
+    Add some extras to Lecture 2
+
+[33mcommit 14b965ea5d1f4968ce6ee5143565e95726f54e20[m
+Author: Dylan Walker <dylan.travis.walker@gmail.com>
+Date:   Thu Feb 5 00:08:29 2026 -0800
+
+    minor edits to lecture 2
+
+[33mcommit f0c2de1015d3f1af6941566d8fd7f98710ea55f7[m
+Author: Dylan Walker <dylan.travis.walker@gmail.com>
+Date:   Thu Feb 5 00:04:45 2026 -0800
+
+    Add Lecture 2
+
+[33mcommit b41c8b8b79962aedc93edbbf0335f2f3715a01a3[m
+Author: Dylan Walker <dylan.travis.walker@gmail.com>
+Date:   Wed Feb 4 16:42:41 2026 -0800
+
+    Update readme
+
+[33mcommit e62bfa6a8e65aba089575ff12ce5133e9f05b001[m
+Author: Dylan Walker <dylan.travis.walker@gmail.com>
+Date:   Wed Feb 4 16:17:58 2026 -0800
+
+    update course readme
+
+[33mcommit a9208539c49bcc0cb6a2df7a589f1ee6ffc0c1e0[m
+Author: Dylan Walker <dylan.travis.walker@gmail.com>
+Date:   Wed Feb 4 15:51:32 2026 -0800
+
+    add test2 file
+
+[33mcommit e598e64cff4efd357af816917763b0424acccbbc[m
+Author: Dylan Walker <dylan.travis.walker@gmail.com>
+Date:   Wed Feb 4 15:43:44 2026 -0800
+
+    add test file
+
+[33mcommit 970e874b3a94baaa5a20bef29267716eb1fb6ee5[m
+Author: Dylan Walker <dylan.travis.walker@gmail.com>
+Date:   Wed Feb 4 15:39:16 2026 -0800
+
+    first commit
