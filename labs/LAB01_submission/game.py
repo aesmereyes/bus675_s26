@@ -1,7 +1,7 @@
 """
 Lab 1: Text-Based Adventure RPG
 ================================
-YOUR NAME HERE
+Abigail Reyes 
 
 Build your game here! This file contains all the starter code from the lab notebook.
 Fill in the TODOs, add your own classes, and make it your own.
