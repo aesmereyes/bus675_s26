@@ -1,16 +1,15 @@
 """
 Lab 1: Text-Based Adventure RPG
 ================================
-Abigail Reyes 
+Abigail Reyes
 
-Build your game here! This file contains all the starter code from the lab notebook.
-Fill in the TODOs, add your own classes, and make it your own.
+Star Wars "What If" Text Adventure
+Set during Episode III - Prevent Anakin from falling to the Dark Side.
 
 Run with: python game.py
 """
 
 import random
-
 
 # =============================================================================
 # Dice Utilities
@@ -27,6 +26,7 @@ def roll_d4():
 def roll_dice(num_dice, sides):
     """Roll multiple dice and return the total."""
     return sum(random.randint(1, sides) for _ in range(num_dice))
+
 
 # =============================================================================
 # Item Classes
@@ -109,9 +109,11 @@ class SithHolocron(KeyItem):
             is_evidence=True
         )
 
+
 # =============================================================================
 # Character Classes
 # =============================================================================
+
 class Character:
     """Base class for all characters."""
 
@@ -201,6 +203,7 @@ class Player(Character):
         print(f"    Equipped: {equipped}")
         print(f"    Inventory: {len(self.inventory)} item(s)")
 
+
 # --- Player Subclasses ---
 
 class ObiWan(Player):
@@ -234,13 +237,17 @@ class ObiWan(Player):
             else:
                 print("  Cold logic. But Anakin slips further from reach.")
         elif location_name == "Padmé's Apartment":
-            print("\n  You speak with Padmé about Anakin.")
+            print("\n  Senator Amidala is pacing anxiously in the living room.")
+            print("  Padmé: 'Master Kenobi... I'm so glad you're here. Anakin is acting strange.'")
+            print("  Padmé: 'He keeps talking about Chancellor Palpatine. I think he is hiding something dangerous.'")
+            print("\n  How do you respond?")
             print("  1. 'I love him like a brother, Padmé. We can still reach him.'")
             print("  2. 'He has gone too far. He is no longer the man we knew.'")
             choice = input("  > ").strip()
             if choice == "1":
                 self.trust_score += 1
                 print("  💙 Trust +1. Padmé's hope strengthens your resolve.")
+                print("  💡 CLUE: She urges you to search the Senate Building for proof of Palpatine's manipulation.")
             else:
                 print("  Sadness fills the room. Padmé weeps quietly.")
         else:
@@ -258,15 +265,22 @@ class Padme(Player):
 
     def talk(self, location_name, game):
         if location_name == "Padmé's Apartment":
-            print("\n  You speak to Anakin's hologram recording.")
-            print("  1. 'Ani, I believe in you. Come back to me.'")
-            print("  2. 'What you are doing is wrong. Stop this.'")
+            print("\n  You walk into your apartment. Anakin is standing on the balcony, staring into the Coruscant night.")
+            print("  Anakin: 'I had the dream again... I can't lose you, Padmé. Chancellor Palpatine says there is a way to stop death...'")
+            print("\n  How do you respond?")
+            print("  1. 'We will figure this out together, my love. I am not going anywhere.'")
+            print("  2. 'You're being paranoid, Anakin. It was just a dream.'")
             choice = input("  > ").strip()
             if choice == "1":
                 self.trust_score += 1
-                print("  💙 Trust +1. Love resonates across the Force bond.")
+                print("  💙 Trust +1. Anakin relaxes slightly, the tension leaving his shoulders.")
+                print("     He pulls you close. The fear in his eyes softens — for now.")
+                print("  💡 CLUE: Palpatine's knowledge of stopping death is unnatural.")
+                print("     You need to search his office in the Senate Building.")
             else:
-                print("  Your words echo in the empty apartment.")
+                print("  Anakin turns away, his face hardening.")
+                print("  'You don't understand. I will do whatever it takes to save you.'")
+                print("  He leaves abruptly. You gained no trust.")
         elif location_name == "The Senate Building":
             print("\n  You confront Palpatine in the Senate halls.")
             print("  1. 'I know what you've done to Anakin. I will expose you.'")
@@ -318,13 +332,16 @@ class Ahsoka(Player):
             else:
                 print("  A noble thought. But Anakin can't hear nuance anymore.")
         elif location_name == "Padmé's Apartment":
-            print("\n  You find old messages from Anakin to Ahsoka.")
+            print("\n  Senator Amidala looks up from a holotable covered in datapads.")
+            print("  Padmé: 'Ahsoka... I wasn't sure who else to call. Anakin won't listen to me. He trusts you. He always has.'")
+            print("\n  How do you respond?")
             print("  1. 'Skyguy — I understand now. The Order never deserved you.'")
             print("  2. 'Your anger at the Jedi is real, but don't let it define you.'")
             choice = input("  > ").strip()
             if choice == "1":
                 self.trust_score += 1
                 print("  💙 Trust +1. A spark of the old bond ignites.")
+                print("  💡 CLUE: Padmé whispers that Palpatine's office in the Senate holds dark secrets.")
             else:
                 print("  Wise words. But Anakin is past wisdom right now.")
         else:
@@ -376,17 +393,21 @@ class MaceWindu(Player):
             else:
                 print("  Cold and final. The door slams shut on any reconciliation.")
         elif location_name == "Padmé's Apartment":
-            print("\n  Padmé confronts you about Anakin.")
+            print("\n  Senator Amidala stands when you enter, arms crossed, jaw set.")
+            print("  Padmé: 'Master Windu. You denied him the rank. You pushed him toward Palpatine. You have to fix this.'")
+            print("\n  How do you respond?")
             print("  1. 'You're right, Senator. I misjudged him. I will make it right.'")
             print("  2. 'My duty is to the Order, not to one man's feelings.'")
             choice = input("  > ").strip()
             if choice == "1":
                 self.trust_score += 1
                 print("  💙 Trust +1. Humility from Mace Windu — rare and powerful.")
+                print("  💡 CLUE: Padmé points you toward the Senate Building. 'That's where Palpatine has him.'")
             else:
                 print("  Padmé stares at you. 'Then you have already lost him.'")
         else:
             print("  There's nothing specific to talk about here.")
+
 
 # =============================================================================
 # Enemy Classes
@@ -453,6 +474,7 @@ class CorruptedAnakin(Enemy):
             xp_value=0
         )
 
+
 # =============================================================================
 # Location Class
 # =============================================================================
@@ -469,11 +491,15 @@ class Location:
         self.is_safe_room = is_safe_room
         self.visited = False
         self.searched = False
+        self._description_count = 0  # guard against duplicate prints
 
     def add_connection(self, direction, location):
         self.connections[direction] = location
 
     def describe_room(self):
+        self._description_count += 1
+        if self._description_count > 1:
+            return  # already described on this arrival — skip duplicate
         print(f"\n{'='*55}")
         print(f"  📍 {self.name}")
         print(f"{'='*55}")
@@ -532,8 +558,8 @@ def create_world():
 
     padme_apartment = Location(
         "Padmé's Apartment",
-        "A serene penthouse overlooking Coruscant's skyline. Padmé's eyes are red from crying. "
-        "Holopads and datapads are scattered across the table — clues to what has happened.",
+        "A luxurious penthouse overlooking the glittering Coruscant skyline. The balcony doors are open, "
+        "letting in the hum of the city. Holopads and datapads are scattered across the table.",
         is_safe_room=True
     )
 
@@ -575,6 +601,7 @@ def create_world():
 # =============================================================================
 # Combat System
 # =============================================================================
+
 class Combat:
     """Manages turn-based combat."""
 
@@ -656,8 +683,9 @@ class Combat:
             return "victory"
         return "fled"
 
+
 # =============================================================================
-# Main Game Class
+# Game Engine
 # =============================================================================
 
 class GameEngine:
@@ -675,16 +703,12 @@ class GameEngine:
         self.game_active = True
         self.state = GameEngine.EXPLORING
 
-    def start(self):
-        """Alias for start_game() for compatibility with lab template."""
-        self.start_game()
-
     def start_game(self):
         self.show_intro()
         self.current_player = self.select_character()
         self.current_location = create_world()
-        self.current_location.describe_room()
         self.current_location.visited = True
+        self.current_location.describe_room()
         self.main_loop()
 
     def show_intro(self):
@@ -766,6 +790,7 @@ class GameEngine:
         if action == "help":
             self.show_help()
         elif action == "look":
+            self.current_location._description_count = 0
             self.current_location.describe_room()
         elif action == "go" and len(parts) > 1:
             self.move(parts[1])
@@ -796,6 +821,7 @@ class GameEngine:
         if direction in self.current_location.connections:
             self.hours_remaining -= 1
             self.current_location = self.current_location.connections[direction]
+            self.current_location._description_count = 0  # reset so new arrival describes once
             print(f"\n  ✈️  Traveling... (1 hour passes | {self.hours_remaining}h remaining)")
             self.current_location.describe_room()
             self.current_location.visited = True
@@ -933,10 +959,11 @@ class GameEngine:
         print("  help             - Show this list")
         print("  quit             - Exit the game")
 
+
 # =============================================================================
 # Run the Game
 # =============================================================================
 
 if __name__ == "__main__":
     game = GameEngine()
-    game.start()
+    game.start_game()

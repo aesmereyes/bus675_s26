@@ -22,5 +22,6 @@
         "terminal.ansiBrightMagenta": "#d670d6",
         "terminal.ansiBrightCyan": "#29b8db",
         "terminal.ansiBrightWhite": "#ffffff"
-    }
+    },
+    "claudeCodeChat.permissions.yoloMode": false
 }
