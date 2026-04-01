@@ -12,4 +12,8 @@ Consider:
 
 ## Your Reflection Below
 
-PUT YOUR REFLECTION HERE.
+The prepocessor finds the inference API using host.docker.internal which works locally. But if it were to be in a seperate datacenter you would need to use a real public URL for the inference.
+
+For shared volumes mounts only work on the same machine. To go across various datacenters you would have to use network storage.
+
+Some challanges that would arise would be network latency between datacenters, authentication & security for the API, handling network failurs and higher cost of sending large image files over the internet. 

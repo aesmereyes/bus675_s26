@@ -207,16 +207,37 @@ async def predict(
 
 
 # ============================================================================
-# TODO: Add /health and /stats endpoints (Part 4)
+# /health and /stats endpoints (Part 4)
 # ============================================================================
-# Your code here!
-# 
-# /health should return: {"status": "healthy", "model_loaded": true}
-#
-# /stats should read from the log file and return statistics like:
-# - Total items processed
-# - Breakdown by classification
-# - Average confidence score
+
+@app.get("/health")
+def health():
+    return {"status": "healthy", "model_loaded": True}
+
+
+@app.get("/stats")
+def stats():
+    if not LOG_PATH.exists():
+        return {"total_processed": 0, "breakdown": {}, "average_confidence": 0.0}
+
+    entries = []
+    with open(LOG_PATH, 'r') as f:
+        for line in f:
+            entries.append(json.loads(line))
+
+    total = len(entries)
+    breakdown = {}
+    for entry in entries:
+        label = entry["top_prediction"]
+        breakdown[label] = breakdown.get(label, 0) + 1
+
+    avg_confidence = round(sum(e["confidence"] for e in entries) / total, 2) if total else 0.0
+
+    return {
+        "total_processed": total,
+        "breakdown": breakdown,
+        "average_confidence": avg_confidence
+    }
 
 
 if __name__ == "__main__":

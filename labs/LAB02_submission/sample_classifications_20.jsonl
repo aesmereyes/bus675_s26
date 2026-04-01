@@ -1,0 +1,20 @@
+{"timestamp": "2026-04-01T01:36:20.706143", "filename": "Screenshot 2026-03-08 193452.png", "customer_id": null, "product_id": null, "top_prediction": "web site", "confidence": 70.58}
+{"timestamp": "2026-04-01T01:36:25.882255", "filename": "Screenshot 2026-03-08 193452.png", "customer_id": null, "product_id": null, "top_prediction": "web site", "confidence": 70.58}
+{"timestamp": "2026-04-01T01:37:50.522616", "filename": "CUST95991_PROD31293_headphones.png", "customer_id": null, "product_id": null, "top_prediction": "loudspeaker", "confidence": 37.75}
+{"timestamp": "2026-04-01T23:23:38.489861", "filename": "CUST12345_PROD67890_test_item.jpg", "customer_id": "12345", "product_id": "67890", "top_prediction": "laptop", "confidence": 51.64}
+{"timestamp": "2026-04-01T23:26:18.014546", "filename": "CUST11539_PROD52115_speaker.png", "customer_id": "11539", "product_id": "52115", "top_prediction": "radio", "confidence": 28.11}
+{"timestamp": "2026-04-01T23:26:18.162171", "filename": "CUST12087_PROD82645_charger.png", "customer_id": "12087", "product_id": "82645", "top_prediction": "espresso maker", "confidence": 46.44}
+{"timestamp": "2026-04-01T23:26:18.332223", "filename": "CUST12955_PROD88668_monitor.png", "customer_id": "12955", "product_id": "88668", "top_prediction": "stove", "confidence": 16.3}
+{"timestamp": "2026-04-01T23:26:18.505055", "filename": "CUST12972_PROD13134_headphones.png", "customer_id": "12972", "product_id": "13134", "top_prediction": "loudspeaker", "confidence": 44.32}
+{"timestamp": "2026-04-01T23:26:18.597637", "filename": "CUST13589_PROD39265_speaker.png", "customer_id": "13589", "product_id": "39265", "top_prediction": "loudspeaker", "confidence": 68.91}
+{"timestamp": "2026-04-01T23:26:18.726013", "filename": "CUST14747_PROD75775_monitor.png", "customer_id": "14747", "product_id": "75775", "top_prediction": "television", "confidence": 34.28}
+{"timestamp": "2026-04-01T23:26:18.913733", "filename": "CUST14902_PROD38500_monitor.png", "customer_id": "14902", "product_id": "38500", "top_prediction": "monitor", "confidence": 46.64}
+{"timestamp": "2026-04-01T23:26:19.053559", "filename": "CUST15283_PROD22013_speaker.png", "customer_id": "15283", "product_id": "22013", "top_prediction": "loudspeaker", "confidence": 65.25}
+{"timestamp": "2026-04-01T23:26:19.202610", "filename": "CUST19537_PROD90191_keyboard.png", "customer_id": "19537", "product_id": "90191", "top_prediction": "mouse", "confidence": 52.51}
+{"timestamp": "2026-04-01T23:30:33.539879", "filename": "CUST11539_PROD52115_speaker.png", "customer_id": "11539", "product_id": "52115", "top_prediction": "radio", "confidence": 28.11}
+{"timestamp": "2026-04-01T23:30:33.662260", "filename": "CUST12087_PROD82645_charger.png", "customer_id": "12087", "product_id": "82645", "top_prediction": "espresso maker", "confidence": 46.44}
+{"timestamp": "2026-04-01T23:30:33.843462", "filename": "CUST12955_PROD88668_monitor.png", "customer_id": "12955", "product_id": "88668", "top_prediction": "stove", "confidence": 16.3}
+{"timestamp": "2026-04-01T23:30:34.034374", "filename": "CUST12972_PROD13134_headphones.png", "customer_id": "12972", "product_id": "13134", "top_prediction": "loudspeaker", "confidence": 44.32}
+{"timestamp": "2026-04-01T23:30:34.134890", "filename": "CUST13589_PROD39265_speaker.png", "customer_id": "13589", "product_id": "39265", "top_prediction": "loudspeaker", "confidence": 68.91}
+{"timestamp": "2026-04-01T23:30:34.267831", "filename": "CUST14747_PROD75775_monitor.png", "customer_id": "14747", "product_id": "75775", "top_prediction": "television", "confidence": 34.28}
+{"timestamp": "2026-04-01T23:30:34.544478", "filename": "CUST14902_PROD38500_monitor.png", "customer_id": "14902", "product_id": "38500", "top_prediction": "monitor", "confidence": 46.64}
