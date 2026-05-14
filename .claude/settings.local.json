@@ -4,7 +4,8 @@
       "Bash(python3:*)",
       "Bash(jupyter nbconvert --to script \"c:/Users/aesme/OneDrive/Documents/Code/bus675_s26/lectures/Lecture_09_PyTorch_Fundamentals.ipynb\" --stdout)",
       "Bash(python -c \":*)",
-      "Bash(python -c ' *)"
+      "Bash(python -c ' *)",
+      "Bash(pip install *)"
     ]
   }
 }
